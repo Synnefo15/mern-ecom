@@ -1,13 +1,12 @@
 import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Product from '../components/Product';
+import { Row, Col } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
+
+import Product from '../components/Product';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-// import data from '../data';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -28,7 +27,6 @@ function HomeScreen() {
     loading: true,
     error: '',
   });
-  // const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
@@ -39,16 +37,15 @@ function HomeScreen() {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       }
 
-      // setProducts(result.data);
     };
     fetchData();
   }, []);
   return (
     <div>
       <Helmet>
-        <title>Amazona</title>
+        <title>Bekasmu</title>
       </Helmet>
-      <h1>Featured Products</h1>
+      <h1>Produk Kami</h1>
       <div className="products">
         {loading ? (
           <LoadingBox />

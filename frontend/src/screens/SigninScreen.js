@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import {Form, Button} from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 
 export default function SigninScreen() {

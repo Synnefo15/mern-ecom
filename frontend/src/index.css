@@ -37,12 +37,22 @@ main {
 .product-info {
   padding: 1rem;
 }
-.img-large {
+/* .img-large {
   max-width: 100%;
-}
+} */
 .img-thumbnail {
   height: 80px;
 }
 .small-container {
   max-width: 600px;
+}
+
+.tombol {
+	border: none;
+}
+
+.tombol:hover {
+	background-color: yellow;
+	font-weight: 700;
+	color: black;
 }
